@@ -1,0 +1,188 @@
+/* =====================
+   GLOBAL RESET & MOOD
+===================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #1b1b2f, #0f0f1a);
+  color: #f5f5f5;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* =====================
+   NAVBAR SEDUCTION
+===================== */
+.navbar {
+  backdrop-filter: blur(12px);
+  background: rgba(15, 15, 26, 0.8) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
+  color: #ff4ecd !important;
+}
+
+/* =====================
+   HERO AREA
+===================== */
+.Hero {
+  margin-top: 2rem;
+}
+
+.hero-para {
+  font-size: 1.2rem;
+  opacity: 0.85;
+}
+
+.brand {
+  font-family: 'Playfair Display', serif;
+  color: #ff4ecd;
+  text-shadow: 0 0 15px rgba(255, 78, 205, 0.6);
+  margin-top: 0.3rem;
+}
+
+/* =====================
+   GAME CONTAINER
+===================== */
+.game {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 24px;
+  box-shadow:
+    inset 0 0 60px rgba(255, 78, 205, 0.05),
+    0 40px 80px rgba(0, 0, 0, 0.7);
+  padding: 3rem 1rem;
+}
+
+/* =====================
+   OPTION BUTTONS
+===================== */
+.opt {
+  background: linear-gradient(135deg, #ff4ecd, #7f5af0);
+  border: none;
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 14px 32px;
+  border-radius: 50px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 15px 35px rgba(255, 78, 205, 0.35);
+  transition: all 0.35s ease;
+}
+
+.opt:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 25px 60px rgba(127, 90, 240, 0.6);
+}
+
+.opt:active {
+  transform: scale(0.95);
+}
+
+/* =====================
+   SCORE BOARD
+===================== */
+.scr-bord {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  padding: 2rem 1rem;
+  box-shadow:
+    inset 0 0 30px rgba(255, 255, 255, 0.03),
+    0 20px 50px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.scr-bord:hover {
+  transform: translateY(-6px);
+}
+
+.scr {
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: #ff4ecd;
+  text-shadow: 0 0 20px rgba(255, 78, 205, 0.7);
+}
+
+.player {
+  opacity: 0.75;
+  letter-spacing: 1px;
+}
+
+/* =====================
+   MOVE PROMPT BUTTON
+===================== */
+.move {
+  background: transparent;
+  border: 2px solid rgba(255, 78, 205, 0.6);
+  color: #ff4ecd;
+  padding: 14px 36px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  letter-spacing: 1px;
+  transition: all 0.35s ease;
+  box-shadow: 0 0 40px rgba(255, 78, 205, 0.15);
+}
+
+.move:hover {
+  background: #ff4ecd;
+  color: #0f0f1a;
+  box-shadow: 0 0 60px rgba(255, 78, 205, 0.7);
+}
+
+/* =====================
+   SOFT BREATHING ANIMATION
+===================== */
+@keyframes breathe {
+  0% { box-shadow: 0 0 40px rgba(255, 78, 205, 0.2); }
+  50% { box-shadow: 0 0 70px rgba(127, 90, 240, 0.6); }
+  100% { box-shadow: 0 0 40px rgba(255, 78, 205, 0.2); }
+}
+
+.game {
+  animation: breathe 6s ease-in-out infinite;
+}
+
+/* =====================
+   RESPONSIVE LOVE
+===================== */
+@media (max-width: 768px) {
+  .opt {
+    margin-bottom: 1rem;
+  }
+
+  .scr {
+    font-size: 2.8rem;
+  }
+}
+/* RESULT STATES */
+.win {
+  box-shadow: 0 0 40px rgba(0, 255, 150, 0.8) !important;
+}
+
+.lose {
+  box-shadow: 0 0 40px rgba(255, 60, 60, 0.8) !important;
+}
+
+.draw {
+  box-shadow: 0 0 40px rgba(255, 200, 0, 0.8) !important;
+}
+
+.shake {
+  animation: shake 0.4s ease;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  50% { transform: translateX(6px); }
+  75% { transform: translateX(-6px); }
+  100% { transform: translateX(0); }
+}
